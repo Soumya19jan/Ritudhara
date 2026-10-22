@@ -1,9 +1,9 @@
 /**
- * LunaGlow 3D - Notification Service
+ * Ritudhara 3D - Notification Service
  * Manages phone push notifications, permission requests, and scheduled daily reminders
  */
 
-const NOTIFICATION_SETTINGS_KEY = 'lunaglow_notification_settings_v1';
+const NOTIFICATION_SETTINGS_KEY = 'ritudhara_notification_settings_v1';
 
 export const DEFAULT_NOTIFICATION_SETTINGS = {
   enabled: false,
@@ -15,7 +15,7 @@ export const DEFAULT_NOTIFICATION_SETTINGS = {
 
 export function getNotificationSettings() {
   try {
-    const raw = localStorage.getItem(NOTIFICATION_SETTINGS_KEY);
+    const raw = localStorage.getItem(NOTIFICATION_SETTINGS_KEY) || localStorage.getItem('lunaglow_notification_settings_v1');
     if (!raw) return DEFAULT_NOTIFICATION_SETTINGS;
     return { ...DEFAULT_NOTIFICATION_SETTINGS, ...JSON.parse(raw) };
   } catch (e) {
@@ -105,7 +105,7 @@ export async function triggerNotification(title, body, extraOptions = {}) {
 export async function sendMorningPadNotification(cycleStatus) {
   const { padRecommendation, daysUntilPeriod, isPeriodDay, cycleDay } = cycleStatus;
 
-  let title = `🎒 Morning Bag Check • LunaGlow`;
+  let title = `🎒 Morning Bag Check • Ritudhara`;
   let body = padRecommendation.recommendation;
 
   if (isPeriodDay) {
@@ -116,7 +116,7 @@ export async function sendMorningPadNotification(cycleStatus) {
     body = `Pack 2 emergency pads in your handbag just in case!`;
   }
 
-  return triggerNotification(title, body, { tag: 'lunaglow-morning-pad' });
+  return triggerNotification(title, body, { tag: 'ritudhara-morning-pad' });
 }
 
 /**
@@ -125,7 +125,7 @@ export async function sendMorningPadNotification(cycleStatus) {
 export async function sendAfternoonComfortNotification() {
   const title = `💧 Hydration & Comfort Check`;
   const body = `Drinking a glass of warm water softens uterine contractions and relieves bloating. Have you had water today?`;
-  return triggerNotification(title, body, { tag: 'lunaglow-afternoon-comfort' });
+  return triggerNotification(title, body, { tag: 'ritudhara-afternoon-comfort' });
 }
 
 /**
@@ -134,5 +134,5 @@ export async function sendAfternoonComfortNotification() {
 export async function sendEveningCheckinNotification(userName = 'Goddess') {
   const title = `🌙 Are you feeling okay tonight?`;
   const body = `Hi ${userName}, take 10 seconds to log today's mood, symptoms & flow before you sleep. Rest well! ✨`;
-  return triggerNotification(title, body, { tag: 'lunaglow-evening-checkin' });
+  return triggerNotification(title, body, { tag: 'ritudhara-evening-checkin' });
 }

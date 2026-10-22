@@ -136,7 +136,7 @@ export default function OnboardingModal({ isOpen, onComplete, initialProfile }) 
               <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-tr from-pink-500/30 to-purple-500/30 border border-pink-400/30 flex items-center justify-center text-3xl shadow-lg shadow-pink-500/10">
                 ✨
               </div>
-              <h2 className="text-2xl font-bold tracking-tight">Welcome to LunaGlow</h2>
+              <h2 className="text-2xl font-bold tracking-tight">Welcome to Ritudhara</h2>
               <p className="text-sm text-pink-200/70 leading-relaxed">
                 Your 3D, privacy-first companion. Let's calibrate your cycle in under 60 seconds.
               </p>
@@ -289,7 +289,7 @@ export default function OnboardingModal({ isOpen, onComplete, initialProfile }) 
 
               <div className="p-3 rounded-2xl bg-white/5 border border-white/5 text-xs text-pink-200/80 leading-relaxed">
                 <strong className="text-white block font-semibold mb-0.5">Don't know your exact days? No problem!</strong>
-                Most cycles fall between 26–32 days (28 days is the standard average). Luna will automatically recalibrate and learn your personal rhythm over time as you log your periods!
+                Most cycles fall between 26–32 days (28 days is the standard average). Ritudhara will automatically recalibrate and learn your personal rhythm over time as you log your periods!
               </div>
             </div>
           </div>

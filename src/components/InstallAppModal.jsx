@@ -65,7 +65,7 @@ export default function InstallAppModal({
         </div>
 
         <p className="text-xs text-pink-100/80 leading-relaxed">
-          Add LunaGlow to your home screen for 1-tap instant access, silky smooth 3D animations, and 100% offline period tracking without browser bars.
+          Add Ritudhara to your home screen for 1-tap instant access, silky smooth 3D animations, and 100% offline period tracking without browser bars.
         </p>
 
         {/* Dynamic Instructions based on Device */}

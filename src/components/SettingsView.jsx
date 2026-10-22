@@ -65,7 +65,7 @@ export default function SettingsView({ profile, cycleStatus, onRecalibrate, onDa
           <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-pink-300">
             <span>📲 Phone Shortcut</span>
           </div>
-          <h4 className="text-sm font-bold text-white">Install LunaGlow as Phone App</h4>
+          <h4 className="text-sm font-bold text-white">Install Ritudhara as Phone App</h4>
           <p className="text-xs text-pink-200/70">
             Get 1-tap home screen access & full-screen experience.
           </p>
@@ -189,7 +189,7 @@ export default function SettingsView({ profile, cycleStatus, onRecalibrate, onDa
         </div>
 
         <p className="text-xs text-pink-100/80 leading-relaxed">
-          Because menstrual health is sensitive personal data, LunaGlow 3D is engineered to run <strong className="text-white">100% serverless</strong> using private browser storage.
+          Because menstrual health is sensitive personal data, Ritudhara 3D is engineered to run <strong className="text-white">100% serverless</strong> using private browser storage.
         </p>
 
         <div className="space-y-2 pt-1 text-xs text-white/80">

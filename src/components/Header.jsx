@@ -10,7 +10,7 @@ export default function Header({ isDesktopFrame, onToggleDesktopFrame, onOpenIns
         </div>
         <div>
           <span className="text-base font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-pink-300 via-rose-200 to-purple-200">
-            LunaGlow 3D
+            Ritudhara 3D
           </span>
           <span className="text-[10px] text-pink-300/60 block font-medium leading-none">
             Smart Cycle & Wellness
@@ -32,7 +32,7 @@ export default function Header({ isDesktopFrame, onToggleDesktopFrame, onOpenIns
         <button
           onClick={onOpenInstallModal}
           className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-pink-500/25 to-purple-500/25 hover:from-pink-500/35 hover:to-purple-500/35 border border-pink-400/30 text-xs font-bold text-pink-200 shadow-sm transition active:scale-95"
-          title="Install LunaGlow as a shortcut App on your phone"
+          title="Install Ritudhara as a shortcut App on your phone"
         >
           <Download className="w-3.5 h-3.5 text-pink-300" />
           <span>Install App</span>

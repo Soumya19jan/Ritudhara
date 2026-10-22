@@ -1,5 +1,5 @@
 /**
- * LunaGlow 3D - Cycle Prediction & Health Engine
+ * Ritudhara 3D - Cycle Prediction & Health Engine
  */
 
 export const PHASES = {

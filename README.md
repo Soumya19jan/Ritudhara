@@ -1,4 +1,4 @@
-# 🌸 Ritudhara (ঋতুধারা • LunaGlow 3D)
+# 🌸 Ritudhara (ঋতুধারা • ऋतुधारा)
 ### *Next-Gen 3D Menstrual Cycle, Ovulation & Reproductive Wellness Companion*
 
 [![React 19](https://img.shields.io/badge/React-19.0.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)

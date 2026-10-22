@@ -1,18 +1,18 @@
 /**
- * LunaGlow 3D - Storage & Persistent Cache Service
+ * Ritudhara 3D - Storage & Persistent Cache Service
  * Guarantees zero DB needed, 100% private client storage, and persistent cached data.
  */
 
 const STORAGE_KEYS = {
-  PROFILE: 'lunaglow_profile_v1',
-  LOGS: 'lunaglow_daily_logs_v1',
-  SETTINGS: 'lunaglow_settings_v1',
-  CALIBRATION_FLAG: 'lunaglow_calibration_completed',
-  INSTALL_DISMISSED: 'lunaglow_install_dismissed_v1'
+  PROFILE: 'ritudhara_profile_v1',
+  LOGS: 'ritudhara_daily_logs_v1',
+  SETTINGS: 'ritudhara_settings_v1',
+  CALIBRATION_FLAG: 'ritudhara_calibration_completed',
+  INSTALL_DISMISSED: 'ritudhara_install_dismissed_v1'
 };
 
 export const DEFAULT_PROFILE = {
-  name: 'Luna',
+  name: 'Ritu',
   lastPeriodDate: '2026-10-15', // Fallback default to ensure predictions work immediately
   cycleLength: 28,
   periodDuration: 5,
@@ -26,9 +26,9 @@ export const DEFAULT_PROFILE = {
  */
 export function isCalibrationCompleted() {
   try {
-    const flag = localStorage.getItem(STORAGE_KEYS.CALIBRATION_FLAG);
+    const flag = localStorage.getItem(STORAGE_KEYS.CALIBRATION_FLAG) || localStorage.getItem('lunaglow_calibration_completed');
     if (flag === 'true') return true;
-    const raw = localStorage.getItem(STORAGE_KEYS.PROFILE);
+    const raw = localStorage.getItem(STORAGE_KEYS.PROFILE) || localStorage.getItem('lunaglow_profile_v1');
     if (raw) {
       const parsed = JSON.parse(raw);
       if (parsed && parsed.calibrated) return true;
@@ -41,7 +41,7 @@ export function isCalibrationCompleted() {
 
 export function getStoredProfile() {
   try {
-    const raw = localStorage.getItem(STORAGE_KEYS.PROFILE);
+    const raw = localStorage.getItem(STORAGE_KEYS.PROFILE) || localStorage.getItem('lunaglow_profile_v1');
     const isCalibrated = isCalibrationCompleted();
 
     if (!raw) {
@@ -77,7 +77,7 @@ export function saveStoredProfile(profile) {
 
 export function getStoredLogs() {
   try {
-    const raw = localStorage.getItem(STORAGE_KEYS.LOGS);
+    const raw = localStorage.getItem(STORAGE_KEYS.LOGS) || localStorage.getItem('lunaglow_daily_logs_v1');
     return raw ? JSON.parse(raw) : {};
   } catch (e) {
     console.error('Error reading logs from localStorage:', e);
@@ -103,7 +103,7 @@ export function saveDailyLog(dateStr, logData) {
 
 export function getInstallDismissed() {
   try {
-    return localStorage.getItem(STORAGE_KEYS.INSTALL_DISMISSED) === 'true';
+    return (localStorage.getItem(STORAGE_KEYS.INSTALL_DISMISSED) || localStorage.getItem('lunaglow_install_dismissed_v1')) === 'true';
   } catch (e) {
     return false;
   }
@@ -119,7 +119,7 @@ export function setInstallDismissed(dismissed = true) {
 
 export function exportBackupJSON() {
   const data = {
-    app: 'LunaGlow 3D Period Tracker',
+    app: 'Ritudhara 3D Period Tracker',
     version: '1.0.0',
     exportDate: new Date().toISOString(),
     profile: getStoredProfile(),
@@ -129,7 +129,7 @@ export function exportBackupJSON() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = `lunaglow_backup_${new Date().toISOString().split('T')[0]}.json`;
+  a.download = `ritudhara_backup_${new Date().toISOString().split('T')[0]}.json`;
   a.click();
   URL.revokeObjectURL(url);
 }

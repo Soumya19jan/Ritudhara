@@ -65,7 +65,7 @@ export default function NotificationPermissionModal({
         </div>
 
         <p className="text-xs text-pink-100/80 leading-relaxed">
-          Allow LunaGlow to send 3 caring, discreet notifications directly to your phone's lock screen:
+          Allow Ritudhara to send 3 caring, discreet notifications directly to your phone's lock screen:
         </p>
 
         {/* 3 Scheduled Notifications Breakdown */}

@@ -1,5 +1,5 @@
-// LunaGlow 3D Offline Cache Service Worker
-const CACHE_NAME = 'lunaglow-cache-v1';
+// Ritudhara 3D Offline Cache Service Worker
+const CACHE_NAME = 'ritudhara-cache-v1';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
