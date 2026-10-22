@@ -1,0 +1,20 @@
+{
+  "name": "LunaGlow 3D • Period & Cycle Companion",
+  "short_name": "LunaGlow",
+  "description": "3D-animated menstrual cycle monitor, ovulation predictor, and smart pad carrying assistant",
+  "start_url": "/",
+  "id": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0c0612",
+  "theme_color": "#130d1a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
